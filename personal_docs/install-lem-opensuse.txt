@@ -1,0 +1,2 @@
+zypper install sbcl
+zypper install libwebkit2gtk-4_1-0

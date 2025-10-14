@@ -1,0 +1,17 @@
+CONFIGURE GLOBAL CONFIG
+
+	git config --global user.name "your-name"
+	git config --global user.email "your-email"
+	#create the global gitgnore file
+	touch .gitignore_global
+	#github has some useful global gitignore
+
+SETUP SSH 
+	
+	ssh-keygen -t rsa -b 4096 -C "your-email"
+	eval "$(ssh-agent -s)"
+	ssh-add ~/.ssh/id_rsa
+	wl-copy < ~/.ssh/id_rsa.pub
+	#setup the key in github or another hosting service
+	#after that
+	ssh -T git@github.com #for github if you get your name is correct  	
